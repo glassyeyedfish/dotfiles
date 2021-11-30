@@ -36,6 +36,7 @@ set expandtab
 set nowrap
 
 set incsearch
+set nohlsearch
 set ignorecase
 set smartcase
 
@@ -47,7 +48,6 @@ set shell=bash
 " Vim-Plugged
 call plug#begin('~/.config/nvim/plugged')
 
-Plug 'itchyny/lightline.vim'
 Plug 'sheerun/vim-polyglot'
 Plug 'scrooloose/nerdtree'
 Plug 'mbbill/undotree'
@@ -59,10 +59,10 @@ let mapleader=" "
 
 inoremap jk <ESC>
 
-nnoremap <Left> :tabp<CR>
-nnoremap <Right> :tabn<CR>
-nnoremap <Up> :tabnew<CR>
-nnoremap <Down> :tabclose<CR>
+nnoremap <Leader><Left> :tabp<CR>
+nnoremap <Leader><Right> :tabn<CR>
+nnoremap <Leader><Up> :tabnew<CR>
+nnoremap <Leader><Down> :tabclose<CR>
 
 nnoremap <Leader>m :!make<CR>
 
@@ -84,21 +84,11 @@ autocmd FileType python map <buffer> <F10> :w<CR>:!cls<CR><CR>:!py %<CR>
 autocmd FileType c map <buffer> <F9> :w<CR>:!cls<CR><CR>:!gcc % <CR>
 autocmd FileType c map <buffer> <F10> :w<CR>:!cls<CR><CR>:!./a.out <CR>
 
-set t_Co=256
-colorscheme molokai
+" Colors
 set background=dark
+colorscheme simple
 
 " PLUGIN CONFIG
-
-" Lightline
-let g:lightline = {
-      \ 'colorscheme': 'molokai',
-      \ }
-
-let s:palette = g:lightline#colorscheme#{g:lightline.colorscheme}#palette
-let s:palette.normal.middle = [ [ 'NONE', 'NONE', 'NONE', 'NONE' ] ]
-let s:palette.inactive.middle = s:palette.normal.middle
-let s:palette.tabline.middle = s:palette.normal.middle
 
 " NERDTree
 let NERDTreeShowHidden=1
