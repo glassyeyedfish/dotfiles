@@ -54,6 +54,9 @@ Plug 'mbbill/undotree'
 
 call plug#end()
 
+" PLUGIN CONFIG
+let NERDTreeShowHidden=1
+
 " Remaps
 let mapleader=" "
 
@@ -79,16 +82,42 @@ nnoremap <Leader>q :q<CR>
 " Auto-Commands
 autocmd FileType sh map <buffer> <F10> :w<CR>:!cls<CR><CR>:!bash %<CR>
 
-autocmd FileType python map <buffer> <F10> :w<CR>:!cls<CR><CR>:!py %<CR>
+autocmd FileType python map <buffer> <F10> :w<CR>:!cls<CR><CR>:!python3 %<CR>
 
 autocmd FileType c map <buffer> <F9> :w<CR>:!cls<CR><CR>:!gcc % <CR>
 autocmd FileType c map <buffer> <F10> :w<CR>:!cls<CR><CR>:!./a.out <CR>
 
+autocmd FileType rust map <buffer> <F9> :w<CR>:!cls<CR><CR>:!rustc % -o a.out <CR>
+autocmd FileType rust map <buffer> <F10> :w<CR>:!cls<CR><CR>:!./a.out <CR>
+
 " Colors
 set background=dark
 colorscheme simple
+hi User1 ctermfg=15 ctermbg=0
+hi User2 ctermfg=0  ctermbg=15
 
-" PLUGIN CONFIG
+" Statusline
+let g:currentmode={
+       \ 'n'      : 'NOR',
+       \ 'v'      : 'VIS',
+       \ 'V'      : 'V·L',
+       \ "\<C-V>" : 'V·B',
+       \ 'i'      : 'INS',
+       \ 'R'      : 'REP',
+       \ 'Rv'     : 'V·R',
+       \ 'c'      : 'CMD',
+       \}
 
-" NERDTree
-let NERDTreeShowHidden=1
+set statusline=
+set statusline+=%2*
+set statusline+=\ %n\ :
+set statusline+=\ %{toupper(g:currentmode[mode()])}
+set statusline+=\ %1*
+set statusline+=\ %m
+set statusline+=\ %f
+set statusline+=\ %r
+set statusline+=%=
+set statusline+=\ %y
+set statusline+=\ %2*
+set statusline+=\ %c:%p%%
+set statusline+=\ %1* 
