@@ -1,4 +1,4 @@
-hi Normal                      ctermbg=0
+"hi Normal                      ctermbg=0
 hi CursorLine      ctermfg=0   ctermbg=15    cterm=none
 hi CursorLineNr    ctermfg=15                cterm=none
 
@@ -87,3 +87,4 @@ hi LineNr          ctermfg=15  ctermbg=0
 hi NonText         ctermfg=9
 
 hi SpecialKey      ctermfg=8
+

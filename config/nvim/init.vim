@@ -11,6 +11,7 @@ set showcmd
 set autoread
 set hidden
 set updatetime=300
+set guicursor=i:block
 
 set laststatus=2
 set noshowmode
@@ -95,26 +96,39 @@ set background=dark
 colorscheme simple
 hi User1 ctermfg=15 ctermbg=0
 hi User2 ctermfg=0  ctermbg=15
+hi NormalColor ctermfg=0  ctermbg=14 cterm=bold
+hi InsertColor ctermfg=0  ctermbg=10 cterm=bold
+hi VisualColor ctermfg=0  ctermbg=13 cterm=bold
+hi ReplacColor ctermfg=0  ctermbg=9  cterm=bold
+hi ComandColor ctermfg=0  ctermbg=11 cterm=bold
 
 " Statusline
 let g:currentmode={
-       \ 'n'      : 'NOR',
-       \ 'v'      : 'VIS',
-       \ 'V'      : 'V·L',
-       \ "\<C-V>" : 'V·B',
-       \ 'i'      : 'INS',
-       \ 'R'      : 'REP',
-       \ 'Rv'     : 'V·R',
-       \ 'c'      : 'CMD',
-       \}
+      \ 'n'      : 'n',
+      \ 'v'      : 'v',
+      \ 'V'      : 'vl',
+      \ '\<C-v>' : 'vb',
+      \ 'i'      : 'i',
+      \ 'R'      : 'r',
+      \ 'Rv'     : 'rv',
+      \ 'c'      : 'c',
+      \ 't'      : 'f',
+      \}
 
 set statusline=
-set statusline+=%2*
-set statusline+=\ %n\ :
-set statusline+=\ %{toupper(g:currentmode[mode()])}
+set statusline+=%#NormalColor#%{(g:currentmode[mode()]=='n')?'\ \ NORMAL\ ':''}
+set statusline+=%#InsertColor#%{(g:currentmode[mode()]=='i')?'\ \ INSERT\ ':''}
+set statusline+=%#ReplacColor#%{(g:currentmode[mode()]=='r')?'\ \ REPLACE\ ':''}
+set statusline+=%#ReplacColor#%{(g:currentmode[mode()]=='rv')?'\ \ V·REP\ ':''}
+set statusline+=%#VisualColor#%{(g:currentmode[mode()]=='v')?'\ \ VISUAL\ ':''}
+set statusline+=%#VisualColor#%{(g:currentmode[mode()]=='vl')?'\ \ V·LINE\ ':''}
+set statusline+=%#VisualColor#%{(g:currentmode[mode()]=='vb')?'\ \ V·BLOCK\ ':''}
+set statusline+=%#ComandColor#%{(g:currentmode[mode()]=='c')?'\ \ COMMAND\ ':''}
+set statusline+=%#NormalColor#%{(g:currentmode[mode()]=='f')?'\ \ FIND\ ':''}
+set statusline+=%2*\ %n
 set statusline+=\ %1*
-set statusline+=\ %m
 set statusline+=\ %f
+set statusline+=\ %m
 set statusline+=\ %r
 set statusline+=%=
 set statusline+=\ %y
