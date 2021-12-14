@@ -107,7 +107,7 @@ let g:currentmode={
       \ 'n'      : 'n',
       \ 'v'      : 'v',
       \ 'V'      : 'vl',
-      \ '\<C-v>' : 'vb',
+      \ "\<C-V>" : 'vb',
       \ 'i'      : 'i',
       \ 'R'      : 'r',
       \ 'Rv'     : 'rv',
