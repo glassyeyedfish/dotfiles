@@ -6,7 +6,6 @@ alias ls="ls --color=auto"
 alias la="ls -a --color=auto"
 alias ll="ls -lh --color=auto"
 alias vim="nvim"
-. "$HOME/.cargo/env"
 
 # Path
-export PATH=$HOME/Scripts/bin:$PATH
+# export PATH=$HOME/Scripts/bin:$PATH
