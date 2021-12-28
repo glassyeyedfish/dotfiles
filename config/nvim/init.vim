@@ -96,11 +96,11 @@ set background=dark
 colorscheme simple
 hi User1 ctermfg=15 ctermbg=0
 hi User2 ctermfg=0  ctermbg=15
-hi NormalColor ctermfg=0  ctermbg=14 cterm=bold
-hi InsertColor ctermfg=0  ctermbg=10 cterm=bold
-hi VisualColor ctermfg=0  ctermbg=13 cterm=bold
-hi ReplacColor ctermfg=0  ctermbg=9  cterm=bold
-hi ComandColor ctermfg=0  ctermbg=11 cterm=bold
+hi NormalColor ctermfg=0  ctermbg=14 
+hi InsertColor ctermfg=0  ctermbg=10 
+hi VisualColor ctermfg=0  ctermbg=13 
+hi ReplacColor ctermfg=0  ctermbg=9  
+hi ComandColor ctermfg=0  ctermbg=11 
 
 " Statusline
 let g:currentmode={

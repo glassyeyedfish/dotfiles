@@ -50,7 +50,7 @@ hi PreCondit       ctermfg=10                cterm=bold
 hi PreProc         ctermfg=10 
 hi Question        ctermfg=14
 hi Repeat          ctermfg=13                cterm=bold
-hi Search          ctermfg=0   ctermbg=15   cterm=NONE
+hi Search          ctermfg=0   ctermbg=15    cterm=none
 
 " marks column
 hi SignColumn      ctermfg=10  ctermbg=0
@@ -64,7 +64,7 @@ hi StorageClass    ctermfg=11
 hi Structure       ctermfg=14
 hi Tag             ctermfg=13 
 hi Title           ctermfg=15
-hi Todo            ctermfg=15  ctermbg=0    cterm=bold
+hi Todo            ctermfg=15  ctermbg=0     cterm=bold
 
 hi TabLineFill 	   ctermfg=0   ctermbg=0     cterm=none
 hi TabLine 		   ctermfg=15  ctermbg=0     cterm=none
