@@ -1,4 +1,3 @@
-"hi Normal                      ctermbg=0
 hi CursorLine      ctermfg=0   ctermbg=15    cterm=none
 hi CursorLineNr    ctermfg=15                cterm=none
 
@@ -40,7 +39,6 @@ hi ModeMsg         ctermfg=15
 hi MoreMsg         ctermfg=15
 hi Operator        ctermfg=13 
 
-" complete menu
 hi Pmenu           ctermfg=14  ctermbg=0
 hi PmenuSel        ctermfg=15  ctermbg=0
 hi PmenuSbar                   ctermbg=0
@@ -50,9 +48,8 @@ hi PreCondit       ctermfg=10                cterm=bold
 hi PreProc         ctermfg=10 
 hi Question        ctermfg=14
 hi Repeat          ctermfg=13                cterm=bold
-hi Search          ctermfg=0   ctermbg=15    cterm=none
+hi Search          ctermfg=0   ctermbg=15    cterm=NONE
 
-" marks column
 hi SignColumn      ctermfg=10  ctermbg=0
 hi SpecialChar     ctermfg=13                cterm=bold
 hi SpecialComment  ctermfg=8                 cterm=bold
@@ -64,7 +61,7 @@ hi StorageClass    ctermfg=11
 hi Structure       ctermfg=14
 hi Tag             ctermfg=13 
 hi Title           ctermfg=15
-hi Todo            ctermfg=15  ctermbg=0     cterm=bold
+hi Todo            ctermfg=15  ctermbg=0    cterm=bold
 
 hi TabLineFill 	   ctermfg=0   ctermbg=0     cterm=none
 hi TabLine 		   ctermfg=15  ctermbg=0     cterm=none
@@ -82,7 +79,7 @@ hi WildMenu        ctermfg=14  ctermbg=10
 
 hi Comment         ctermfg=8
 hi CursorColumn                ctermbg=0
-hi ColorColumn                 ctermbg=0
+hi ColorColumn     cterm=reverse ctermbg=0
 hi LineNr          ctermfg=15  ctermbg=0
 hi NonText         ctermfg=9
 
