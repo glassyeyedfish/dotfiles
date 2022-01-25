@@ -1,0 +1,71 @@
+[col]
+bg = #00000000
+fg = #f1f1f1
+ba = #cc121212
+fa = #8f8f8f
+ck = #121212
+co = #fd971f
+cg = #a7e22e
+cy = #e7db75
+cp = #ae82ff
+cm = #fa2772
+cb = #66efd6
+
+[bar/mainbar]
+wm-restack =                        bspwm
+width =                             100%:-16
+height =                            32
+offset-x =                          8
+offset-y =                          8
+background =                        ${col.bg}
+foreground =                        ${col.fg}
+font-0 =                            "IBMPlexMono:size=12;2"
+font-1 =                            "Font Awesome 5 Free:style=Solid:size=12;2"
+font-2 =                            "Font Awesome 5 Free:style=Solid:size=12;2"
+font-3 =                            "Font Awesome 5 Free:style=Solid:size=12;2"
+modules-left =                      bspwm
+modules-right =                     audio spacer date-icon date spacer tray-icon
+tray-position =                     right
+tray-background =                   ${col.ba}
+tray-padding =                      3
+
+[module/bspwm]
+type =                              internal/bspwm
+label-focused =                     " %name% "
+label-focused-background =          ${col.co}
+label-focused-foreground =          ${col.ck}
+label-occupied =                    " %name% "
+label-occupied-background =         ${col.ba}
+label-empty =                       " %name% "
+label-empty-background =            ${col.ba}
+label-empty-foreground =            ${col.fa}
+
+[module/audio]
+type =                              internal/pulseaudio
+sink =                              alsa_output.pci-0000_12_00.3.analog-stereo
+use-ui-max =                        true
+interval =                          5
+content-background =                        ${col.ba}
+
+[module/date-icon]
+type =                              custom/text
+content =                           "  "
+content-background =                ${col.cm}
+content-foreground =                ${col.ck}
+
+[module/date]
+type =                              internal/date
+time =                              %I:%M:%S %p
+time-alt =                          %a, %b %d
+label =                             " %time% "
+label-background =                  ${col.ba}
+
+[module/tray-icon]
+type =                              custom/text
+content =                           "  "
+content-background =                ${col.cb}
+content-foreground =                ${col.ck}
+
+[module/spacer]
+type =                              custom/text
+content =                           " "
