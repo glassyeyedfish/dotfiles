@@ -25,7 +25,7 @@ hi Float           ctermfg=12
 hi FoldColumn      ctermfg=14  ctermbg=0
 hi Folded          ctermfg=14  ctermbg=0
 hi Function        ctermfg=10 
-hi Identifier      ctermfg=11               cterm=none
+hi Identifier      ctermfg=11                cterm=none
 hi Ignore          ctermfg=15  ctermbg=0
 hi IncSearch       ctermfg=15  ctermbg=0
 
@@ -34,7 +34,7 @@ hi Label           ctermfg=15                cterm=none
 hi Macro           ctermfg=9
 hi SpecialKey      ctermfg=14
 
-hi MatchParen      ctermfg=0   ctermbg=15   cterm=bold
+hi MatchParen      ctermfg=0   ctermbg=15    cterm=bold
 hi ModeMsg         ctermfg=15
 hi MoreMsg         ctermfg=15
 hi Operator        ctermfg=13 
@@ -61,7 +61,7 @@ hi StorageClass    ctermfg=11
 hi Structure       ctermfg=14
 hi Tag             ctermfg=13 
 hi Title           ctermfg=15
-hi Todo            ctermfg=15  ctermbg=0    cterm=bold
+hi Todo            ctermfg=15  ctermbg=0     cterm=bold
 
 hi TabLineFill 	   ctermfg=0   ctermbg=0     cterm=none
 hi TabLine 		   ctermfg=15  ctermbg=0     cterm=none
@@ -73,15 +73,15 @@ hi Underlined                       		 cterm=underline
 
 hi VertSplit       ctermfg=15  ctermbg=0     cterm=bold
 hi VisualNOS                   ctermbg=0
-hi Visual          ctermfg=0   ctermbg=15
+hi Visual          ctermfg=0   ctermbg=15    cterm=none
 hi WarningMsg      ctermfg=15  ctermbg=0     cterm=bold
 hi WildMenu        ctermfg=14  ctermbg=10
 
 hi Comment         ctermfg=8
 hi CursorColumn                ctermbg=0
-hi ColorColumn     cterm=reverse ctermbg=0
+hi ColorColumn                 ctermbg=0     cterm=reverse 
 hi LineNr          ctermfg=15  ctermbg=0
 hi NonText         ctermfg=9
 
-hi SpecialKey      ctermfg=8
+hi SpecialKey      ctermfg=7
 

@@ -66,13 +66,9 @@ Plug 'tomtom/tlib_vim' "Dependencie of below
 Plug 'garbas/vim-snipmate'
 Plug 'honza/vim-snippets'
 
-Plug 'junegunn/goyo.vim'
-Plug 'junegunn/limelight.vim'
-
 "Plug 'scrooloose/nerdcommenter'
 "Plug 'neoclide/coc.nvim', {'branch': 'release'}
 "Plug 'sirver/ultisnips'
-"Plug 'honza/vim-snippets'
 
 call plug#end()
 
@@ -90,13 +86,6 @@ imap <A-n> <Plug>snipMateNextOrTrigger
 smap <A-n> <Plug>snipMateNextOrTrigger
 imap <A-N> <Plug>snipMateBack
 smap <A-N> <Plug>snipMateBack
-
-" goyo.vim
-nnoremap <Leader>g :Goyo<CR>
-
-" limelight.vim
-let g:limelight_conceal_ctermfg = 8
-nnoremap <Leader>l :Limelight!!<CR>
 
 " =========================================================================== "
 " REMAPS
@@ -117,6 +106,9 @@ nnoremap <Leader>mr :make run<CR>
 
 nnoremap <Leader>s :so ~/.config/nvim/init.vim<CR>
 
+nnoremap <Leader>vm :mkview<CR>
+nnoremap <Leader>vl :loadview<CR>
+
 nnoremap <Leader>u :UndotreeToggle<CR>:UndotreeFocus<CR>
 
 " =========================================================================== "
@@ -132,11 +124,11 @@ colorscheme simple
 
 hi User1 ctermfg=15 ctermbg=0
 hi User2 ctermfg=0  ctermbg=15
-hi NormalColor ctermfg=0  ctermbg=14 cterm=bold
-hi InsertColor ctermfg=0  ctermbg=10 cterm=bold
-hi VisualColor ctermfg=0  ctermbg=13 cterm=bold
-hi ReplacColor ctermfg=0  ctermbg=9  cterm=bold
-hi ComandColor ctermfg=0  ctermbg=11 cterm=bold
+hi NormalColor ctermfg=0  ctermbg=14
+hi InsertColor ctermfg=0  ctermbg=10
+hi VisualColor ctermfg=0  ctermbg=13
+hi ReplacColor ctermfg=0  ctermbg=9
+hi ComandColor ctermfg=0  ctermbg=11
 
 let g:currentmode={
       \ 'n'      : 'n',
