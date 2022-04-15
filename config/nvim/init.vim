@@ -45,8 +45,8 @@ set ignorecase
 set smartcase
 
 set encoding=utf-8
-set scrolloff=8
-set sidescrolloff=16
+set scrolloff=2
+set sidescrolloff=4
 set shell=bash
 
 let mapleader=" "
@@ -58,17 +58,13 @@ let mapleader=" "
 call plug#begin('~/.config/nvim/plugged')
 
 Plug 'sheerun/vim-polyglot'
+Plug 'uiiaoo/java-syntax.vim'
+
 Plug 'scrooloose/nerdtree'
 Plug 'mbbill/undotree'
+Plug 'junegunn/fzf.vim'
 
-Plug 'MarcWeber/vim-addon-mw-utils' "Dependencie of below
-Plug 'tomtom/tlib_vim' "Dependencie of below
-Plug 'garbas/vim-snipmate'
-Plug 'honza/vim-snippets'
-
-"Plug 'scrooloose/nerdcommenter'
-"Plug 'neoclide/coc.nvim', {'branch': 'release'}
-"Plug 'sirver/ultisnips'
+Plug 'tpope/vim-commentary'
 
 call plug#end()
 
@@ -80,12 +76,12 @@ call plug#end()
 let NERDTreeShowHidden=1
 nnoremap <Leader>n :NERDTreeToggle<CR>
 
-" snipmate
-let g:snipMate = { 'snippet_version' : 1 }
-imap <A-n> <Plug>snipMateNextOrTrigger
-smap <A-n> <Plug>snipMateNextOrTrigger
-imap <A-N> <Plug>snipMateBack
-smap <A-N> <Plug>snipMateBack
+" undotree
+nnoremap <Leader>u :UndotreeToggle<CR>:UndotreeFocus<CR>
+
+" ctrlp
+nnoremap <Leader>b :Buffer<CR>
+nnoremap <Leader>f :Files<CR>
 
 " =========================================================================== "
 " REMAPS
@@ -93,23 +89,17 @@ smap <A-N> <Plug>snipMateBack
 
 inoremap jk <ESC>
 
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+
 nnoremap <Leader><Left> :tabp<CR>
 nnoremap <Leader><Right> :tabn<CR>
 nnoremap <Leader><Up> :tabnew<CR>
 nnoremap <Leader><Down> :tabclose<CR>
 
-nnoremap <Leader>b :!$HOME/Scripts/bin/build.sh %<CR>
-
-nnoremap <Leader>mb :make build<CR>
-nnoremap <Leader>mc :make clean<CR>
-nnoremap <Leader>mr :make run<CR>
-
 nnoremap <Leader>s :so ~/.config/nvim/init.vim<CR>
-
-nnoremap <Leader>vm :mkview<CR>
-nnoremap <Leader>vl :loadview<CR>
-
-nnoremap <Leader>u :UndotreeToggle<CR>:UndotreeFocus<CR>
 
 " =========================================================================== "
 " Colors
@@ -124,11 +114,11 @@ colorscheme simple
 
 hi User1 ctermfg=15 ctermbg=0
 hi User2 ctermfg=0  ctermbg=15
-hi NormalColor ctermfg=0  ctermbg=14
-hi InsertColor ctermfg=0  ctermbg=10
-hi VisualColor ctermfg=0  ctermbg=13
+hi NormalColor ctermfg=0  ctermbg=10
+hi InsertColor ctermfg=0  ctermbg=12
+hi VisualColor ctermfg=0  ctermbg=11
 hi ReplacColor ctermfg=0  ctermbg=9
-hi ComandColor ctermfg=0  ctermbg=11
+hi ComandColor ctermfg=0  ctermbg=13
 
 let g:currentmode={
       \ 'n'      : 'n',
@@ -162,4 +152,3 @@ set statusline+=\ %y
 set statusline+=\ %2*
 set statusline+=\ %c:%p%%
 set statusline+=\ %1* 
-
