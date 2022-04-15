@@ -64,7 +64,7 @@ hi Title           ctermfg=15
 hi Todo            ctermfg=15  ctermbg=0     cterm=bold
 
 hi TabLineFill 	   ctermfg=0   ctermbg=0     cterm=none
-hi TabLine 		   ctermfg=15  ctermbg=0     cterm=none
+hi TabLine 		     ctermfg=15  ctermbg=0     cterm=none
 hi TabLineSel 	   ctermfg=0   ctermbg=15    cterm=none
 
 hi Typedef         ctermfg=14
@@ -84,4 +84,3 @@ hi LineNr          ctermfg=15  ctermbg=0
 hi NonText         ctermfg=9
 
 hi SpecialKey      ctermfg=7
-
