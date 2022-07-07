@@ -66,6 +66,8 @@ Plug 'junegunn/fzf.vim'
 
 Plug 'tpope/vim-commentary'
 
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
 call plug#end()
 
 " =========================================================================== "
@@ -79,9 +81,10 @@ nnoremap <Leader>n :NERDTreeToggle<CR>
 " undotree
 nnoremap <Leader>u :UndotreeToggle<CR>:UndotreeFocus<CR>
 
-" ctrlp
+" fzf
 nnoremap <Leader>b :Buffer<CR>
 nnoremap <Leader>f :Files<CR>
+command W w
 
 " =========================================================================== "
 " REMAPS
